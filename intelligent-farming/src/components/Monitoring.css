@@ -331,13 +331,34 @@
   .monitoring__goals {
     grid-template-columns: repeat(2, 1fr);
   }
+  .monitoring__arch-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
   .monitoring__goals {
     grid-template-columns: 1fr;
   }
-  .monitoring__arch-node:not(:last-of-type) {
-    margin-bottom: 0;
+  .monitoring__arch {
+    flex-wrap: wrap;
+  }
+  .monitoring__arch-wrapper {
+    flex-direction: column;
+    flex: 1 1 calc(50% - 8px);
+    min-width: calc(50% - 8px);
+  }
+  .monitoring__arch-node {
+    width: 100%;
+  }
+  .monitoring__arch-node--first { border-radius: var(--radius-md) var(--radius-md) 0 0; }
+  .monitoring__arch-node--last { border-radius: 0 0 var(--radius-md) var(--radius-md); }
+  .monitoring__arch-arrow {
+    transform: rotate(90deg);
+    width: 24px;
+    height: 24px;
+  }
+  .monitoring__arch-details-grid {
+    grid-template-columns: 1fr;
   }
 }
