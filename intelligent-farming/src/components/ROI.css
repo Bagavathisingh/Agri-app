@@ -1,0 +1,276 @@
+.roi {
+  background: var(--color-bg-primary);
+}
+
+.roi__header { margin-bottom: 48px; }
+
+/* Cost Cards */
+.roi__cost-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.roi__cost-card {
+  padding: 28px 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.roi__cost-card--highlight {
+  border-color: rgba(34, 197, 94, 0.35);
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.roi__cost-icon { font-size: 2rem; }
+
+.roi__cost-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.roi__cost-value {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.roi__kpi {
+  font-size: 2rem;
+  background: var(--gradient-green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.roi__cost-note {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* Comparison */
+.roi__comparison {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.roi__comparison-card {
+  flex: 1;
+  padding: 28px;
+}
+
+.roi__comparison-card h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+
+.roi__comparison-card--smart {
+  border-color: rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.03);
+}
+
+.roi__comparison-card--smart h3 {
+  color: var(--color-green-300);
+}
+
+.roi__comparison-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.roi__comparison-badge {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 10px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.roi__comparison-badge span:first-child {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #4ade80;
+}
+
+.roi__comparison-badge span:last-child {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* Revenue bars */
+.roi__rev-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.roi__rev-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.roi__rev-label {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  flex: 0 0 65px;
+}
+
+.roi__rev-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.roi__rev-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.85;
+}
+
+.roi__rev-value {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex: 0 0 72px;
+  text-align: right;
+}
+
+/* Benefits */
+.roi__benefits {
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.roi__benefits h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 24px;
+}
+
+/* Bar Chart */
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bar-chart__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bar-chart__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 200px;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.bar-chart__icon { font-size: 1rem; }
+
+.bar-chart__bar-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bar-chart__bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-chart__fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+.bar-chart__value {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex: 0 0 40px;
+  text-align: right;
+}
+
+/* Breakdown */
+.roi__breakdown {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.roi__breakdown-card {
+  padding: 28px;
+}
+
+.roi__breakdown-card h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 18px;
+}
+
+.roi__breakdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.87rem;
+}
+
+.roi__breakdown-item:last-child { border-bottom: none; }
+
+.roi__breakdown-item--included span { color: var(--color-text-secondary); }
+.roi__breakdown-item--excluded span { color: var(--color-text-muted); }
+
+@media (max-width: 1024px) {
+  .roi__cost-cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .roi__comparison { flex-direction: column; }
+  .roi__comparison-arrow { flex-direction: row; }
+  .roi__comparison-arrow svg { transform: rotate(90deg); }
+  .roi__breakdown { grid-template-columns: 1fr; }
+  .bar-chart__label { flex: 0 0 140px; }
+}

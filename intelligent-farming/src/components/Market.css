@@ -1,0 +1,223 @@
+.market {
+  background: var(--color-bg-secondary);
+}
+
+.market__header { margin-bottom: 48px; }
+
+/* Market Stats */
+.market__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.market__stat-card {
+  padding: 28px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-top: 2px solid var(--card-color, var(--color-green-400));
+  transition: all 0.3s ease;
+}
+
+.market__stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+}
+
+.market__stat-icon { font-size: 1.8rem; }
+
+.market__stat-value {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.market__stat-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.market__stat-desc {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* Context banner */
+.market__context {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 32px;
+  background: rgba(34, 197, 94, 0.04);
+  border-color: rgba(34, 197, 94, 0.2) !important;
+}
+
+.market__context-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.market__context-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.market__context-content p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* Future Badges */
+.market__future-badges {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.market__future-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.market__future-badge > span {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.market__future-badge strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.market__future-badge p {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+/* Future Cards */
+.market__future {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 0;
+}
+
+.market__future-card {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.market__future-num {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+.market__future-icon {
+  font-size: 2rem;
+}
+
+.market__future-card h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.market__future-card p {
+  font-size: 0.87rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+/* References */
+.market__refs {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+}
+
+.market__refs h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 28px;
+}
+
+.market__refs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.market__ref {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.market__ref:last-child { border-bottom: none; }
+
+.market__ref-num {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-green-500);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.market__ref-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.market__ref-desc {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .market__stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .market__stats { grid-template-columns: 1fr; }
+  .market__future { grid-template-columns: 1fr; }
+  .market__context { flex-direction: column; }
+  .market__refs { padding: 24px; }
+}
